@@ -1,0 +1,74 @@
+
+
+<html>
+<header>
+  
+</header>
+
+<body class="wrapper" id="formContent">
+  <h1>Hello</h1>
+  <div>
+  <form id="form" method="get" action="ordonnance.html">
+    <div class="champ">
+      <label for="name">Nom: </label>
+      <input type="text" name="name" id="nom" required>
+    </div>
+    <div class="champ">
+      <label for="email">Prénom: </label>
+      <input type="text" name="Forename" id="prenom" required>
+    </div>
+    <div class="champ">
+      <label for="tel">N° de téléphone: </label>
+      <input type="tel" name="tel" id="tel" required>
+    </div>
+    <div class="champ">
+      <label for="id">N° d’identification: </label>
+      <input type="integer" name="integer" id="ident" required>
+    </div>
+    <div class="champ">
+      <label for="id">Corps de l'ordonnance: </label>
+      <input type="text" name="text" id="ordo" required>
+    </div>
+    <div class="form-example">
+      <input type="submit" value="Envoyer" >
+    </div>
+  </form>
+</body>
+
+<script>
+  sessionStorage.setItem("name",document.getElementById("nom").value)
+  sessionStorage.setItem("prenom",document.getElementById("prenom").value)
+  sessionStorage.setItem("tel",document.getElementById("tel").value)
+  
+</script>
+
+<style>
+  .champ {
+    margin: 1em;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+    margin:auto;
+    margin-top:10%
+  }
+  #formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+  }
+</style>
+</html>
